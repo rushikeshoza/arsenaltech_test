@@ -32,8 +32,6 @@ $(document).ready(function () {
                 selectedSeatNo.push($(seat).data('seat-no'));
             });
             
-            $('.seat-text').html('You have selected ' + selectedSeatNo.join(', ') + ' seats...!!!');
-            
         } else {
             
             if (_this.hasClass('cancel-selected')) {
@@ -55,9 +53,15 @@ $(document).ready(function () {
             $.each(selectedSeats, function (key, seat) {
                 cancelSelectedSeatNo.push($(seat).data('seat-no'));
             });
-            
-            $('.seat-text').empty().append('You have selected ' + cancelSelectedSeatNo.join(', ') + ' seats...!!!');
         }
+    });
+    
+    $('.cancel-now-btn').on('click', function () {
+        $('.seat-text').html('You have selected ' + selectedSeatNo.join(', ') + ' seats...!!!');
+    });
+    
+    $('.book-now-btn').on('click', function () {
+        $('.seat-text').html('You have selected ' + cancelSelectedSeatNo.join(', ') + ' seats...!!!');
     });
     
     $('.book-seat-btn').on('click', function () {
