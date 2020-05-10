@@ -57,11 +57,11 @@ $(document).ready(function () {
     });
     
     $('.cancel-now-btn').on('click', function () {
-        $('.seat-text').html('You have selected ' + selectedSeatNo.join(', ') + ' seats...!!!');
+        $('.seat-text').html('You have selected seat no. ' + cancelSelectedSeatNo.join(', '));
     });
     
     $('.book-now-btn').on('click', function () {
-        $('.seat-text').html('You have selected ' + cancelSelectedSeatNo.join(', ') + ' seats...!!!');
+        $('.seat-text').html('You have selected seat no. ' + selectedSeatNo.join(', '));
     });
     
     $('.book-seat-btn').on('click', function () {

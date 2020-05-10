@@ -102,8 +102,8 @@ class Controller extends BaseController
     /**
      * <This function will check and remove booking from the data base if found entry>
      * @param  : [obj] [$request] [<Request Param Object>]
-     * @return : [json] [<Return json>]
-     * @author : Rushikesh Oza <rushikesho.bipl@gmail.com> | 10 May 2020 (Sunday)
+     * @return : [void]
+     * @author : Rushikesh Oza <rushikesh.oza27@gmail.com> | 10 May 2020 (Sunday)
      */
     public function cancelBooking(Request $request)
     {
