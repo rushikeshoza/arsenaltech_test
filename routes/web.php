@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ['as' => 'get_seats', 'uses' => 'Controller@getSeats']);
+
+Route::post('/book', ['as' => 'book_seats', 'uses' => 'Controller@bookSeats']);
+
+Route::post('/cancel', ['as' => 'cancel_booking', 'uses' => 'Controller@cancelBooking']);
